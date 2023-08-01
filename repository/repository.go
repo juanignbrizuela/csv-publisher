@@ -33,7 +33,7 @@ func (r Repository) Publish(ctx context.Context, line []string) error {
 	}
 	request := &model.NumericID{ID: id}
 
-	err = r.restClient.DoPost(ctx, url, request, nil, restclient.Header{Key: "X-Auth-Token", Value: FuryToken})
+	err = r.restClient.DoPost(ctx, url, request, nil, restclient.Header{Key: "X-Tiger-Token", Value: FuryToken})
 	if err != nil {
 		return err
 	}
@@ -66,7 +66,7 @@ func (r Repository) MultiPublish(ctx context.Context, lines [][]string) (*model.
 	}
 
 	response := &model.MultiResponseNumericIDs{}
-	err = r.restClient.DoPost(ctx, url, request, response, restclient.Header{Key: "X-Auth-Token", Value: FuryToken})
+	err = r.restClient.DoPost(ctx, url, request, response, restclient.Header{Key: "X-Tiger-Token", Value: FuryToken})
 	if err != nil {
 		return nil, err
 	}
