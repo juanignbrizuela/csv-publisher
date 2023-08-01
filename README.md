@@ -1,1 +1,1 @@
-# csv-republisher
+# csv-publisher
