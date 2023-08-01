@@ -5,8 +5,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/csv-republisher/model"
-	"github.com/csv-republisher/tools/restclient"
+	"github.com/csv-publisher/model"
+	"github.com/csv-publisher/tools/restclient"
 )
 
 const FuryToken = "{token}"

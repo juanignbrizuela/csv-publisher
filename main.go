@@ -6,11 +6,11 @@ import (
 	"log"
 	"os"
 
-	"github.com/csv-republisher/config"
-	"github.com/csv-republisher/repository"
-	"github.com/csv-republisher/tools/customcontext"
-	"github.com/csv-republisher/tools/file"
-	"github.com/csv-republisher/tools/restclient"
+	"github.com/csv-publisher/config"
+	"github.com/csv-publisher/repository"
+	"github.com/csv-publisher/tools/customcontext"
+	"github.com/csv-publisher/tools/file"
+	"github.com/csv-publisher/tools/restclient"
 )
 
 var (
@@ -74,7 +74,7 @@ func main() {
 	return
 }
 
-//Multi mode
+// Multi mode
 func publishMultiMode(ctx context.Context, data [][]string, fileW io.Writer, repo *repository.Repository) {
 	var processedLines, errorCounter int
 	toPublish := make([][]string, 0, republishConfig.ItemsPerRequest)
